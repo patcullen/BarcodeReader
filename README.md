@@ -8,17 +8,13 @@ BarcodeReader is a class/file to include on your webpage if you want to detect a
 How to use
 ----------
 
-Include the following code in the head of your web page.</p>
+Include a reference to the BarcodeReader.js script file and the following code in a script block in the head of your web page.
 
-<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js" language="JavaScript" type="text/javascript" ></script>
-<script src="BarcodeReader.js" ></script>
-<script>
 	new BarcodeReader({
 		onRead: function(v) {
 			$('txtGlobal').set('value', v).highlight();
 		}
 	});
-</script>
 
 
 Screenshots
