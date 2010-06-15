@@ -1,7 +1,6 @@
 /*
 ---
-description: ScannerKeystrokeObserver, A class to automatically detect entries from a hardware device that 
-generates keystrokes (like a barcode scanner).
+description: ScannerKeystrokeObserver, A class to automatically detect entries from a hardware device that generates keystrokes (like a barcode scanner).
 
 license: MIT-style
 
