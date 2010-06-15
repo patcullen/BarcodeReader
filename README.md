@@ -1,16 +1,17 @@
-BarcodeReader
+ScannerKeystrokeObserver
 ===========
 
-BarcodeReader is a class/file to include on your webpage if you want to detect and react to a barcode reader. 
+ScannerKeystrokeObserver is a class to automatically detect entries from a hardware device that 
+generates keystrokes (like a barcode scanner).
 
-![Screenshot](http://pat.cullen.co.za/project/BarcodeReader/Screenshot.png)
+![Screenshot](http://pat.cullen.co.za/project/ScannerKeystrokeObserver/Screenshot.png)
 
 How to use
 ----------
 
-Include a reference to the BarcodeReader.js script file and the following code in a script block in the head of your web page.
+Include a reference to the ScannerKeystrokeObserver.js script file and the following code in a script block in the head of your web page.
 
-	new BarcodeReader({
+	new ScannerKeystrokeObserver({
 		onRead: function(v) {
 			$('txtGlobal').set('value', v).highlight();
 		}
@@ -20,5 +21,5 @@ Include a reference to the BarcodeReader.js script file and the following code i
 Screenshots
 -----------
 
-![Screenshot](http://pat.cullen.co.za/project/BarcodeReader/Screenshot.png)
+![Screenshot](http://pat.cullen.co.za/project/ScannerKeystrokeObserver/Screenshot.png)
 

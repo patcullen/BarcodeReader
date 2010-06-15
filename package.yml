@@ -1,6 +1,6 @@
-name: BarcodeReader
+name: ScannerKeystrokeObserver
 author: patcullen
 category: Utilities
-tags: [barcode, utility]
-demo: http://pat.cullen.co.za/project/BarcodeReader
+tags: [barcode, keystroke observer, utility]
+demo: http://pat.cullen.co.za/project/ScannerKeystrokeObserver
 current: 0.1

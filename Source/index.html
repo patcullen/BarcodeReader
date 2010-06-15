@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><title>Barcode Reader</title>
+<html><head><title>Scanner Keystroke Observer</title>
 <style>
 body {
 	font-family: Verdana;
@@ -16,16 +16,16 @@ pre {
 }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js" language="JavaScript" type="text/javascript" ></script>
-<script src="BarcodeReader.js" ></script>
+<script src="ScannerKeystrokeObserver.js" ></script>
 <script>
 window.addEvent('domready', function() {
-	new BarcodeReader({
+	new ScannerKeystrokeObserver({
 		delay: 500,
 		onRead: function(v) {
 			$('txtGlobal').set('value', v).highlight();
 		}
 	});
-	new BarcodeReader({
+	new ScannerKeystrokeObserver({
 		element: 'txtLocal',
 		delay: 500,
 		onRead: function(v) {
@@ -37,8 +37,9 @@ window.addEvent('domready', function() {
 </script>
 </head>
 <body>
-	<h1>BarcodeReader</h1>
-	<p>A mootools class to facilitate the capture and detection of barcode entries from a scanner.</p>
+	<h1>ScannerKeystrokeObserver</h1>
+	<p>A class to automatically detect entries from a hardware device that 
+generates keystrokes (like a barcode scanner).</p>
 	
 	<p>How does it work? This class is designed on the assumption that your barcode scanner 
 	hardware will act like a keyboard. As a barcode is scanned a series of keypress 
@@ -46,16 +47,14 @@ window.addEvent('domready', function() {
 	of milliseconds), then it can be assumed that a scanner device pushed the series of key events. Otherwise it is
 	just normal human input and will be ignored by the barcode reader class.</p>
 	
-	<p>See <a href="http://mootools.net/shell/paQbp/">this mooshell</a> if you want to play with the controls straight away.</p>
-	
 	<div>
 		<h2>How to use</h2>
 		<p>Include the following code in the head of your web page.</p>
 		<pre>
 	&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js&quot; language=&quot;JavaScript&quot; type=&quot;text/javascript&quot; &gt;&lt;/script&gt;
-	&lt;script src=&quot;BarcodeReader.js&quot; &gt;&lt;/script&gt;
+	&lt;script src=&quot;ScannerKeystrokeObserver.js&quot; &gt;&lt;/script&gt;
 	&lt;script&gt;
-	new BarcodeReader({
+	new ScannerKeystrokeObserver({
 		onRead: function(v) {
 			$('txtGlobal').set('value', v).highlight();
 		}
@@ -70,7 +69,7 @@ window.addEvent('domready', function() {
 	<div>
 		<h2>Global catch</h2>
 		<pre>
-	new BarcodeReader({
+	new ScannerKeystrokeObserver({
 		onRead: function(v) {
 			$('txtGlobal').set('value', v).highlight();
 		}
@@ -82,7 +81,7 @@ window.addEvent('domready', function() {
 	<div>
 		<h2>Linked to a text control</h2>
 		<pre>
-	new BarcodeReader({
+	new ScannerKeystrokeObserver({
 		element: 'txtLocal',
 		onRead: function(v) {
 			$('txtLocal').set('value', v).highlight();
